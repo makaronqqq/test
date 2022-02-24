@@ -1,0 +1,117 @@
+/* Позиционирование блоков, списки */
+/* изначально блок, который стоит в html раньше, находится снизу блоков, которые написаны после него, чтобы переместить блок вверх надо использовать команду слоев z-index, чем больше, тем выше стоит блок, так же надо использовать позиционирование блока через position, к примеру reletive */
+/* * {
+  margin: 0;
+  padding: 0;}
+.div1 {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background: red;
+  color: white;
+  padding: 20px;}
+#first {
+  float: right;; /*куда прижат блок, это свойство надо указывать ко всем блокам, которые идут на одном уровне. Можно выстроить блоки на одной линии}
+#second {
+  background: blue;
+  float: right;}*/
+
+body {
+height: 2000px;
+}
+
+#nav {
+  list-style: none; /*кружочки, расчет и тд*/
+  display: block;
+  float: left;
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+  margin-bottom: 50px;
+
+
+}
+
+#nav li {
+  display: inline; /*отображает как строку*/
+  background: #fafafa;
+  border: 1px solid silver;
+  padding: 0 20px; /*отступ внутри блока, то что это блоки я указал в #nav*/
+  cursor: pointer;
+}
+
+#nav li:hover /*используем hover при наведении он меняет блок*/ {
+  color: #fff;
+  background: #333;
+  border-radius: 5px; /*скругление углов при наведении*/
+  border-color: #333;
+}
+
+#nav li:not(:last-of-type) /*берем все li, кроме последнего элемента, это псевдоклассы вроде как*/{
+  margin-right: 20px;
+}
+
+
+  #some_block {
+    background: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    line-height: 50px; /*пространство между строками*/
+    text-align: center;
+    border-radius: 50%; /*скругляет углы*/
+    /*position: absolute; выставляет блок в верхний левый угол страницы*/
+    position: fixed; /* объект всегда видно на странице*/
+    left: 20px;
+    top: 100px;
+
+  }
+
+  #header, #footer {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    border-bottom: 2px solid red; /*линия внизу*/
+    background: #333;
+    color: #fff;
+    line-height: 100px; /* Чтобы текст был точно по центру надо указать line-height такого же размера как height*/
+    margin-bottom: 50px; /* отступ после блока*/
+    float: left;
+  }
+
+  #main {
+    width: 50%;
+    margin-left: 10%; /*отступ слева на 10% экрана*/
+    background: #fafafa;
+    border: 1px solid red;
+    padding: 20px 2.5%; /* отступ внутри блока сверху и снизу по 20px, слева и справа по 2.5% экрана*/
+    float: left;
+    margin-right: 5%;
+    z-index: 1;
+    position: relative;
+
+  }
+
+#aside{
+  width: 20%;
+  padding: 20px 2.5%; /* ширина этого блока будет 25%, что бы он встал в 1 ряд с блоком main, надо делать 90%, тк примерно 10% надо бы оставить с правой стороны*/
+  /*margin-right: 9%;  ваще не обязательно, итак встанет, использую 9%, а не 10%, тк еще идет обводка в 1 px, а ваще он не нужен*/
+  background: #fafafa;
+  border: 1px solid red;
+  float: left; /* этот тег надо использовать ко всем блокам, которые надо выстроить*/
+  position: relative; /*Можно смещать блок в любую сторону относительно того, где он находится. Закрепляет блок на месте и его можно двигать в нужном направлении*/
+  bottom: -10px;
+  right: 200px;
+  z-index: 0;
+
+
+}
+
+#footer {
+  margin-bottom: 0;
+  margin-top: 50px;
+  border-bottom: 0;
+  border-top: 2px solid red;
+  float: left;
+
+}

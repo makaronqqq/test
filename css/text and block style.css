@@ -1,0 +1,45 @@
+/* стили для текста , стили для блоков */
+/* @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700;800&display=swap'); |* добавить свой шрифт с сайта гугла*/
+
+/*.main_text {
+  color: black;
+  text-align: justify ;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 700;
+  font-family: 'Spectral', serif;
+  text-transform: none;
+  word-spacing: 20px;
+  letter-spacing: 1px;
+  line-height: 50px;
+  text-decoration: underline;
+  cursor: copy;
+  background-image: url(images.jpg);
+  color: white;
+  background-attachment: fixed; /*закрепляет картинку при скроле}*/ /* */
+
+/*все отступы идут 1 значение для все, если 2 значениея, то 1(верх низ) 2(лево право), третье значение добавляет левый отступ и 4 значение - все идет по часовой стрелке
+Знак * обращается ко всем объектам на странице
+Изначально отступ на страничке есть по дефолту, что бы убрать, надо убирать отступ ко всей страницу сразу используюя символ *
+Span - строка. к строчным объектам нельзя добавить теги на ширину и высоту
+*/
+
+.div1 {
+  background: red;
+  height: 200px;
+  width: 300px;
+  border: 5px black dashed; /* обводка*/
+  border-bottom: none;
+  border-style: double; /* тип линии*/
+  border-radius: 30px 60% 50px 60% ;/*скругление углов, по часовой стрелку*/
+  opacity: 0.8; /*прозрачность*/
+  margin: 30px 100px; /* отступ для блок снаружис разных сторон лефт райт и тд*/
+  padding: 50px; /* внутренний отступ в блоке */
+  display: block; /*изменить как будет выглядить объект, как вариант из строки сделать блок "отображение объекта"*/
+
+}
+
+* {
+  margin: 0;
+  padding: 8;
+}
